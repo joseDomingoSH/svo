@@ -2,10 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Online de Ventas</title>
+    <title>SVO - Búsqueda en JS</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input { padding: 8px; width: 250px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 8px; border-bottom: 1px solid #ddd; }
+    </style>
 </head>
 <body>
-    
+
+    <h2>Buscar Producto por Nombre (JS)</h2>
+    <input type="text" id="inputBuscar" placeholder="Escribe el nombre del producto..." onkeyup="ejecutarBusqueda()">
+
+    <ul id="listaResultados"></ul>
+
+    <script>
+        const catálogo = [
+            { id: 1, nombre: "Laptop HP Pavilion", precio: 12500.50 },
+            { id: 2, nombre: "Mouse Inalámbrico", precio: 350.00 },
+            { id: 3, nombre: "Licuadora 3 Velocidades", precio: 899.00 }
+        ];
+
+        function ejecutarBusqueda() {
+            const texto = document.getElementById("inputBuscar").value.toLowerCase();
+            const lista = document.getElementById("listaResultados");
+            lista.innerHTML = "";
+
+            const filtrados = catálogo.filter(p => p.nombre.toLowerCase().includes(texto));
+
+            filtrados.forEach(p => {
+                const li = document.createElement("li");
+                li.textContent = `${p.nombre} - $${p.precio}`;
+                lista.appendChild(li);
+            });
+        }
+
+        ejecutarBusqueda();
+    </script>
 </body>
 </html>
