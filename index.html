@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Online de Ventas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Ventas Online</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+  
+<div class="main-container">
     
+    <!-- Tarea 3: Diseñar el formulario de registro -->
+    <div class="card">
+      <h2>Registrar Producto</h2>
+      <form id="form-registro">
+        <div class="field-group">
+          <label>Nombre</label>
+          <input type="text" id="reg-nombre">
+        </div>
+        <div class="field-group">
+          <label>Precio</label>
+          <input type="text" id="reg-precio">
+        </div>
+        <div class="field-group">
+          <label>Descripción</label>
+          <textarea id="reg-desc"></textarea>
+        </div>
+        <button type="submit">Guardar Producto</button>
+      </form>
+    </div>
+
+    <!-- Tarea 2: Diseñar el formulario de edición -->
+    <div class="card">
+      <h2>Editar Producto</h2>
+      <form id="form-edicion">
+        <div class="field-group">
+          <label>Nombre a Editar</label>
+          <input type="text" id="edit-nombre">
+        </div>
+        <div class="field-group">
+          <label>Nuevo Precio</label>
+          <input type="text" id="edit-precio">
+        </div>
+        <div class="field-group">
+          <label>Nueva Descripción</label>
+          <textarea id="edit-desc"></textarea>
+        </div>
+        <button type="submit">Actualizar Producto</button>
+      </form>
+    </div>
+
+    <!-- Tarea 1: Programar la consulta y visualización de productos -->
+    <div class="card">
+      <h2>Catálogo / Consulta</h2>
+      <div class="field-group">
+        <input type="text" id="input-buscar" placeholder="Buscar producto...">
+      </div>
+      <div id="lista-productos">
+        <!-- Aquí se visualizan los productos mediante JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
