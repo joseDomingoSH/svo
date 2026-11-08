@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Online de Ventas</title>
+    <meta name="theme-color" content="#f6f7fb">
+    <title>Sistema Online de Ventas | SOV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="#inicio" data-view="inicio" aria-label="SOV, ir al inicio">
+                <span class="brand-mark">s</span>
+                <span class="brand-name">sov<span>.</span></span>
+            </a>
+            <div class="workspace-label">ESPACIO DE TRABAJO</div>
+            <div class="workspace-switcher">
+                <span class="workspace-avatar">N</span>
+                <span class="workspace-copy"><strong>Nova Store</strong><small>Plan estándar</small></span>
+                <span class="switcher-chevron" aria-hidden="true">⌄</span>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a class="nav-link active" href="#inicio" data-view="inicio" aria-current="page"><span class="nav-icon" aria-hidden="true">◫</span> Resumen</a>
+                <a class="nav-link" href="#productos" data-view="productos"><span class="nav-icon" aria-hidden="true">◇</span> Productos</a>
+                <a class="nav-link" href="#ventas" data-view="ventas"><span class="nav-icon" aria-hidden="true">↗</span> Ventas</a>
+                <a class="nav-link" href="#inventario" data-view="inventario"><span class="nav-icon" aria-hidden="true">▦</span> Inventario</a>
+                <a class="nav-link" href="#reportes" data-view="reportes"><span class="nav-icon" aria-hidden="true">▤</span> Reportes</a>
+                <a class="nav-link" href="#usuarios" data-view="usuarios"><span class="nav-icon" aria-hidden="true">♙</span> Usuarios</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a class="nav-link" href="mailto:soporte@sov.com"><span class="nav-icon" aria-hidden="true">?</span> Ayuda y soporte</a>
+                <div class="profile">
+                    <span class="profile-avatar">MG</span>
+                    <span class="profile-copy"><strong>María García</strong><small>Administradora</small></span>
+                    <span class="demo-badge">Demo</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content" id="inicio">
+            <header class="topbar">
+                <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+                <div class="breadcrumbs">SOV <span>/</span> <strong id="breadcrumb-current">Resumen</strong></div>
+                <div class="topbar-actions">
+                    <span class="today-label" id="today-label"></span>
+                    <span class="topbar-avatar">MG</span>
+                </div>
+            </header>
+            <div class="page-content">
+                <div id="app-view" aria-live="polite"></div>
+                <footer class="page-footer">© 2026 SOV · Sistema Online de Ventas · Datos guardados en este navegador</footer>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
