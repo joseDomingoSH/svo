@@ -1,4 +1,6 @@
-
+var listaProductos = [
+    {}
+];
 // Programar la consulta y visualización de productos
 function mostrarCatalogo(filtro) {
     var contenedor = document.getElementById("lista-productos");
